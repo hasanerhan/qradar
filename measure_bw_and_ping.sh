@@ -5,7 +5,7 @@
 # DATE        : 2025/03/14
 # UPDATE      :  
 # VERSION     : Check $REV variable
-# DESCRIPTION : Transfer files to measure bw. ping to managed host. 
+# DESCRIPTION : Transfer files to measure bandwith to MH and  ping test to MH. 
 #             :  
 # CHANGELOG   :
 # 
