@@ -12,7 +12,15 @@
 # TODO        : 
 #
 REV="1.0"
-
+function version {
+  clear
+  echo -e "VERSION: $REV"
+  exit 0
+ }
+if [ "$1" == "-v" ]
+then
+version
+fi
 # LET'S GO
 clear
 TSMP="$(date +"%b %d %H:%m:%S %Y")"

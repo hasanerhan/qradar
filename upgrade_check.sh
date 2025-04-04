@@ -9,6 +9,16 @@
 # CHANGELOG   : v1.0 First Publication
 #TODO:
 #Functions
+REV="1.1"
+function version {
+  clear
+  echo -e "VERSION: $REV"
+  exit 0
+ }
+if [ "$1" == "-v" ]
+then
+version
+fi
 clear
 #VARIABLES
 TSMP="$(date +"%b %d %H:%m:%S %Y")"
@@ -75,7 +85,7 @@ fi
 echo "$TSMP Check IJ38233:"  2>&1 |tee -a $LOG  
 #https://www.ibm.com/mysupport/s/defect/aCI3p000000Ch0w/dt125259?language=en_US
 #UNRESTRICTED JCE JAR FILES
-ls -1 /opt/ibm/java-x86_64-80/jre/lib/security/*.jar| grep -ie local_policy -ie US_export_policy >/dev/null
+ls -1 /opt/ibm/java-x86_64-80/jre/lib/security/*.jar| grep -ie local_policy -ie US_export_policy 2>/dev/null
 HCUJ=$?
 if [ $HCUJ -eq 0 ]
  then
