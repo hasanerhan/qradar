@@ -105,7 +105,7 @@ else
 fi
 #
 #Move script to all appliances
-if [ "$ITAIO" == "yesaio" ]
+if [ "$ITAIO" != "yesaio" ]
 then
    if [ $(cat /opt/qradar/conf/capabilities/hostcapabilities.xml  | grep isConsole | awk -F '"' {'print $2'}) = "true" ]
    then
